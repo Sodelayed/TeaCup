@@ -5,11 +5,7 @@ import {
 	CheckOutPayment,
 } from './LeftSideComponents';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-	selectUserBasket,
-	selectUserId,
-	selectUserLogin,
-} from '../../../redux/selectors';
+import { selectUserBasket, selectUserId } from '../../../redux/selectors';
 import { prepareOrder } from '../../../hooks/prepare-order';
 import { addToOrders } from '../../../redux/actions';
 import { useNavigate } from 'react-router-dom';

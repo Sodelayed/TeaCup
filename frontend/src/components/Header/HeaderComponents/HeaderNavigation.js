@@ -8,7 +8,6 @@ export const HeaderNavigation = () => {
 			<StyledLink to="/menu">меню</StyledLink>
 			<StyledLink to="/location">мы на карте</StyledLink>
 			<StyledLink to="/work">работа</StyledLink>
-			<StyledLink to="/test">тест</StyledLink>
 		</HeaderBtns>
 	);
 };

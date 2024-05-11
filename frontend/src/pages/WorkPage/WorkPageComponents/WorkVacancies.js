@@ -21,7 +21,7 @@ export const WorkVacancies = () => {
 					</div>
 				</div>
 				<div className="vacancy-barista-image">
-					<img src="images/barista.jpg" alt="barista"></img>
+					<img src="https://i.ibb.co/D8400Yf/barista.jpg" alt="barista"></img>
 				</div>
 			</div>
 		</WorkVacanciesContainer>
