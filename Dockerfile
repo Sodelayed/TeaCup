@@ -6,11 +6,11 @@ COPY . .
 
 
 WORKDIR /usr/src/app/frontend
-RUN npm i
+RUN NODE_ENV=development npm i
 RUN npm run build
 
 WORKDIR /usr/src/app/backend
-RUN npm i
+RUN NODE_ENV=development npm i
 
 EXPOSE 4000
 
