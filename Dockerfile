@@ -7,7 +7,7 @@ COPY . .
 
 WORKDIR /usr/src/app/frontend
 RUN NODE_ENV=development npm i
-RUN NODE_ENV=development node --max-old-space-size=2048 /usr/local/bin/npm run build
+RUN NODE_ENV=development node --max-old-space-size=8192 /usr/local/bin/npm run build
 
 WORKDIR /usr/src/app/backend
 RUN NODE_ENV=development npm i
