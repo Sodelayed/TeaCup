@@ -4,8 +4,9 @@ import styled from 'styled-components';
 import { selectBasketsLoader, selectUserBasket } from '../../redux/selectors';
 import { useSelector } from 'react-redux';
 
-import { BasketIsFull, BasketisEmpty } from './BasketComponents';
+import { BasketIsFull } from './BasketComponents';
 import { Loader } from '../../components/Loader';
+import { EmptyContainerBlock } from '../../components';
 
 export const BasketPage = () => {
 	const basket = useSelector(selectUserBasket);
@@ -17,7 +18,13 @@ export const BasketPage = () => {
 			{basketsLoader ? (
 				<Loader color="secondary" height="600px" />
 			) : (
-				<>{basket.length >= 1 ? <BasketIsFull /> : <BasketisEmpty />}</>
+				<>
+					{basket.length >= 1 ? (
+						<BasketIsFull />
+					) : (
+						<EmptyContainerBlock text={'Ваша корзина пуста'} />
+					)}
+				</>
 			)}
 		</BasketContainer>
 	);

@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 
 import { loadOrders, setOrdersLoader } from '../../redux/actions';
 import { Loader } from '../../components/Loader';
+import { EmptyContainerBlock } from '../../components';
 
 export const OrdersPage = () => {
 	const roleId = useSelector(selectUserRole);
@@ -41,7 +42,7 @@ export const OrdersPage = () => {
 					})}
 				</>
 			) : (
-				<div></div>
+				<EmptyContainerBlock text={'История заказов пуста'} />
 			)}
 		</OrdersContainer>
 	);

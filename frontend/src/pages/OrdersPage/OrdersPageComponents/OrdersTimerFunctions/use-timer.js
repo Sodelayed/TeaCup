@@ -16,7 +16,7 @@ export const useTimer = (order) => {
 		const timer = setInterval(() => {
 			setValue(timeDifferenceMaker(order));
 			orderStateChanger(timeDifferenceMaker(order), order, dispatch);
-		}, 30000);
+		}, 10000);
 
 		return () => clearInterval(timer);
 	}, [value, order, dispatch]);

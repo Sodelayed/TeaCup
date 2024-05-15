@@ -15,7 +15,7 @@ export const Alert = () => {
 
 		dispatch(setAlert({ state: false, text: '' }));
 	};
-	console.log(alertIsOpen);
+
 	return (
 		<Snackbar
 			open={alertIsOpen}

@@ -4,3 +4,4 @@ export * from './Loader';
 export * from './Alert';
 export * from './AccessDenied';
 export * from './PageNotFound';
+export * from './EmptyContainer';

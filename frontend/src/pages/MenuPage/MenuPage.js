@@ -50,7 +50,7 @@ export const MenuPage = () => {
 					<Grid item xs={9}>
 						<MenuSortButton />
 						{productsLoader ? (
-							<Loader color="primary" height="600px" />
+							<Loader color="primary" height="964px" />
 						) : (
 							<>
 								<MenuProducts />

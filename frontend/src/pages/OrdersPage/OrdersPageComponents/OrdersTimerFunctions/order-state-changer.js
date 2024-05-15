@@ -1,10 +1,17 @@
 import { changeOrderState } from '../../../../redux/actions';
 
 export const orderStateChanger = (value, order, dispatch) => {
-	if (value === '00:05' && order.state !== 'start cooking') {
-		dispatch(changeOrderState(order.id, 'start cooking'));
-	}
-	if (value === '00:00' && order.state !== 'time left') {
-		dispatch(changeOrderState(order.id, 'time left'));
+	const splitedTime = value.split(':');
+	if (Number(splitedTime[0]) === 0) {
+		if (
+			Number(splitedTime[1]) <= 5 &&
+			Number(splitedTime[1]) !== 0 &&
+			order.state !== 'start cooking'
+		) {
+			dispatch(changeOrderState(order.id, 'start cooking'));
+		}
+		if (Number(splitedTime[1]) === 0 && order.state !== 'time left') {
+			dispatch(changeOrderState(order.id, 'time left'));
+		}
 	}
 };

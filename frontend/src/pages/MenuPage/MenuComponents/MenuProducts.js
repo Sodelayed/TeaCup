@@ -3,7 +3,8 @@ import { ProductCard } from './ProductCard';
 import styled from 'styled-components';
 import { selectProducts } from '../../../redux/selectors';
 import { useSelector } from 'react-redux';
-import { CircularProgress } from '@mui/material';
+
+import { Loader } from '../../../components';
 
 export const MenuProducts = () => {
 	const products = useSelector(selectProducts);
@@ -17,7 +18,7 @@ export const MenuProducts = () => {
 					return <ProductCard el={el} key={index} />;
 				})
 			) : (
-				<CircularProgress color="secondary" />
+				<Loader height="964px" color="primary" />
 			)}
 		</ProductsContainer>
 	);

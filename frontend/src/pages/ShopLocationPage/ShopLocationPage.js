@@ -65,7 +65,8 @@ export const ShopLocationPage = () => {
 									options={{
 										iconLayout: 'default#image',
 										iconImageSize: [50, 50],
-										iconImageHref: 'images/cup-icon.png',
+										iconImageHref:
+											'https://i.ibb.co/Q9bGfrT/cup-icon.png',
 									}}
 								/>
 							);

@@ -91,7 +91,7 @@ const ProductInfoContainer = styled.div`
 	.productBackground {
 		width: 95%;
 		height: 95%;
-		background-image: url(images/product-background.jpg);
+		background-image: url(https://i.ibb.co/FD2Nns2/product-background.jpg);
 		background-size: cover;
 		border-radius: 13rem;
 		padding: 5px;

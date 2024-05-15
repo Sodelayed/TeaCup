@@ -5,7 +5,6 @@ import { setOrdersLoader } from '../loaders-actions/set-orders-loader';
 export const loadOrders = () => (dispatch) =>
 	request('/orders', 'GET')
 		.then(({ data: orders }) => {
-			console.log(orders);
 			dispatch(setOrders(orders));
 		})
 		.finally(() => dispatch(setOrdersLoader(false)));
